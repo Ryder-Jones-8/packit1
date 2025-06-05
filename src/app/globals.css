@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* Default theme */
+:root {
+  --background: #ffffff;
+  --background-card: #f9fafb;
+  --background-hover: #f3f4f6;
+  --foreground: #171717;
+  --foreground-muted: #6b7280;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --primary-hover: #1d4ed8;
+  --secondary: #e5e7eb;
+  --secondary-foreground: #1f2937;
+  --accent: #60a5fa;
+  --accent-foreground: #ffffff;
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+  --background: #0f172a;
+  --background-card: #1e293b;
+  --background-hover: #334155;
+  --foreground: #f8fafc;
+  --foreground-muted: #94a3b8;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --primary-hover: #2563eb;
+  --secondary: #334155;
+  --secondary-foreground: #f1f5f9;
+  --accent: #38bdf8;
+  --accent-foreground: #0f172a;
+}
+
+/* Pink theme */
+[data-theme='pink'] {
+  --background: #fdf2f8;
+  --background-card: #fbf7fc;
+  --background-hover: #f9e6f3;
+  --foreground: #831843;
+  --foreground-muted: #be185d;
+  --primary: #db2777;
+  --primary-foreground: #ffffff;
+  --primary-hover: #be185d;
+  --secondary: #f9a8d4;
+  --secondary-foreground: #831843;
+  --accent: #ec4899;
+  --accent-foreground: #ffffff;
+}
+
+/* Forest theme */
+[data-theme='forest'] {
+  --background: #ecfdf5;
+  --background-card: #f2fcf7;
+  --background-hover: #d1fae5;
+  --foreground: #064e3b;
+  --foreground-muted: #065f46;
+  --primary: #059669;
+  --primary-foreground: #ffffff;
+  --primary-hover: #047857;
+  --secondary: #a7f3d0;
+  --secondary-foreground: #064e3b;
+  --accent: #10b981;
+  --accent-foreground: #ffffff;
+}
+
+:root {
+  --font-poppins: var(--font-poppins);
+  --font-montserrat: var(--font-montserrat);
+  --font-orbitron: var(--font-orbitron);
+  --font-inter: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle {
+  position: relative;
+  z-index: 10;
+}
