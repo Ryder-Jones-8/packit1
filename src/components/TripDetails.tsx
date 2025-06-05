@@ -87,7 +87,7 @@ export default function TripDetails({ trip, onTripUpdate }: TripDetailsProps) {
       const updatedTrip = addItemToBag(trip.id, bagId, item);
       if (updatedTrip) {
         onTripUpdate(updatedTrip);
-        setAvailableItems(availableItems.filter(i => i.id !== item.id));
+        setAvailableItems(prev => prev.filter(i => i.id !== item.id));
       }
     } catch (error) {
       console.error('Error adding item to bag:', error);
@@ -101,7 +101,7 @@ export default function TripDetails({ trip, onTripUpdate }: TripDetailsProps) {
       onTripUpdate(updatedTrip);
       const item = getAllClothingItems().find(i => i.id === itemId);
       if (item) {
-        setAvailableItems([...availableItems, item]);
+        setAvailableItems(prev => [...prev, item]);
       }
     }
   };
